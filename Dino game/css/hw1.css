@@ -1,0 +1,39 @@
+.{
+   padding: 0;
+   margin: 0;
+   /* always give this ,removes browser default mar,pad */
+}
+#game{
+   width: 500px;
+   height: 200px;
+   border: 1px solid black;
+}
+#char{
+   width: 20px;
+   height: 50px;
+   background-color: rgb(243, 138, 19);
+   position: relative;
+   top: 150px;
+}
+.animate{ /* this class will be added in javascript so when called char*/
+   animation: jump 500ms;
+}
+@keyframes jump{
+   0%{top: 150px;}/*jump*/
+   30%{top: 100px;}/*stay up*/
+   70%{top: 100px;}/* stay up*/
+   100%{top: 150px;}/*come down*/
+}
+#block{
+   width: 20px;
+   height: 20px;
+   background-color: rgb(24, 136, 39);
+   position: relative;
+   top: 130px;
+   left: 480px;
+   animation: block 1s infinite linear; /* moving for 1s infinite loop in linear smooth motion*/
+}
+@keyframes block{
+   0%{left: 480px;}
+   100%{left: -40px;}
+}
